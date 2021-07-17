@@ -26,6 +26,10 @@
 </html>
 <script type="text/javascript">
 	$(document).ready(function () {
-
+		$("[type=checkbox]").change(function() {
+			$("#output").html("");
+			$("#output").html("<p>You appear to like the following fruits:</p>").append($(":checked").next().clone());
+			// alert("changed!");
+		});
 	});
 </script>
